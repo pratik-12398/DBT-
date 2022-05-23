@@ -1,0 +1,18 @@
+create database pratik;
+use pratik
+create table TEMPP
+(
+x varchar (20),
+y varchar (20),
+z char (20)
+);
+delimiter //
+create procedure PROC1(x varchar (20),y varchar (20))
+begin 
+if instr(y,x)!=0 then 
+insert into tempp values (y,x,'present');
+else
+insert into tempp values (y,x,'absent');
+end if;
+end; //
+delimiter ;
